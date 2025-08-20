@@ -353,3 +353,175 @@ function factorial(num) {
 var num = 3
 var res = factorial(num)
 console.log(`${num} Factorial is : ${res}`)
+
+
+
+ //Anonymous Function
+
+ //1
+
+var test = function(){
+   console.log("test function call")
+}
+
+test()
+
+// //2
+
+var sum = function(){
+   var a = 10
+   var b = 20
+
+   return a +b
+}
+
+console.log(sum())
+
+
+// //3
+var sum = function(a,b){
+  console.log(a+b)
+}
+
+sum(10,20)
+
+// //4
+var sum = function(a,b){
+  return a+b
+}
+
+console.log(sum(10,20))
+
+
+// //2 Arrow or Flat function
+
+// //1
+var test = ()=>{
+  console.log("test func")
+}
+
+test()
+
+
+// //2
+
+var sum = () =>{
+  var a = 10
+  var b = 20
+
+  return a+b
+}
+
+console.log(sum())
+
+
+// //3
+
+var sum = (a,b)=>{
+  return a + b
+}
+
+console.log(sum(10,20))
+
+
+// //4
+
+var sum = (a,b) =>{
+  return a+b
+}
+
+console.log(sum(10,20))
+
+
+// //Self Invoked Function or Immedately Invoked Function Expression 
+
+//1
+(function test(){
+  console.log("test call")
+})()
+
+
+
+//2
+console.log(`sum is ${function sum(){
+   var a =10
+   var b =20
+   return a + b
+}()}`)
+
+
+
+//3
+
+console.log(`Sum is ${function sum (a,b){
+  return a+b
+}(10,20)}`)
+
+
+//4
+console.log(`Sum is ${function sum(a,b){
+    console.log(a+b)
+}(10,20)}`)
+
+
+
+
+//Anonimous Function
+//1
+
+
+(function (){
+  console.log("func")
+})()
+
+//2
+
+
+console.log(`sum ${function(){
+   var a =10
+   var b =20
+   return a+b
+}()}`)
+
+//3
+
+
+(function (a,b){
+  console.log(a+b)
+})(10,20)
+
+
+//4
+console.log(`Sum is ${function(a,b){
+  return a+b
+}(10,20)}`)
+
+//Fat Arrow function
+
+//1
+
+
+
+(()=>console.log("In test Function"))()
+//2
+
+
+console.log(`sum is ${(()=>{
+  var a = 10
+  var b =20
+  return a + b
+})()}`)
+
+//3
+
+
+console.log(`Sum is ${((a,b)=>{
+    return a +b
+})(10,20)}`)
+
+//4
+
+
+console.log(`sum is ${((a,b)=>{
+  console.log(a+b)
+})(10,20)}`)
